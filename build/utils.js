@@ -36,7 +36,7 @@ exports.cssLoaders = function (options) {
         loader: 'sass-resources-loader',
         options: {
           resources: [
-            path.resolve(__dirname, '../src/assets/styles/junxio.less'),
+            path.resolve(__dirname, '../src/assets/styles/theme.less'),
           ]
         }
       }
@@ -80,11 +80,7 @@ exports.cssLoaders = function (options) {
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
-    less: generateLoaders('less', {
-      resources: [
-        path.resolve(__dirname, '../src/assets/styles/junxio.less'),
-      ]
-    }),
+    less: lessResourceLoader(),
     sass: generateLoaders('sass', {
       indentedSyntax: true
     }),

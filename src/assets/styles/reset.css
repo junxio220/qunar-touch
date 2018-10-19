@@ -39,6 +39,7 @@ td {
 fieldset,
 img {
   border: 0;
+  vertical-align: middle;
 }
 :focus {
   outline: 0;
@@ -87,7 +88,7 @@ select {
 body {
   background: #fff;
   color: #5e5e5e;
-  font: 14px/2em Microsoft YaHei, SimSun, Arial;
+  font: 14px/2em Open Sans,Microsoft Yahei,sans-serif;
 }
 ol,
 ul {
@@ -115,10 +116,10 @@ blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: '';
   content: none;
 }
@@ -132,7 +133,7 @@ a:hover {
 a:active {
   color: #666;
 }
-.clearfix:after {
+.clearfix::after {
   content: '';
   display: block;
   clear: both;

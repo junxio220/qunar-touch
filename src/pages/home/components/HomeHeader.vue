@@ -9,7 +9,7 @@
 			<svg class="findIcon" aria-hidden="true">
 				<use xlink:href="#icon-sousuo"></use>
 			</svg>
-			input
+			输入城市/景点/游玩主题
 		</div>
 		<div class="header-right">
 			城市
@@ -39,7 +39,7 @@ export default {
 		display: flex;
 		height: unit(43/100, rem);
 		line-height: .43rem;
-		background: #00bcd4;
+		background: @themeColor;
 		color: #fff;
 		.header-left {
 			height: 100%;
@@ -63,7 +63,7 @@ export default {
 			background: #fff;
 			border-radius: unit(2/100, rem);
 			margin: unit(6/100, rem) 0;
-			color: rgba(0, 0, 0, 0.5); 
+			color: rgba(0, 0, 0, 0.2); 
 			display: flex;
 			.findIcon{
 				width: unit(20/100, rem);
