@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /* css reset */
-*,
+/* *,
 *:before,
 *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
+} */
 body,
 div,
 dl,
@@ -135,9 +135,7 @@ a:active {
 .clearfix:after {
   content: '';
   display: block;
-  height: 0;
   clear: both;
-  visibility: hidden;
 }
 .clearfix {
   *zoom: 1;
@@ -152,4 +150,7 @@ a:active {
   height: 0;
   overflow: hidden;
   clear: both;
+}
+html{
+  font-size: 100px;
 }
