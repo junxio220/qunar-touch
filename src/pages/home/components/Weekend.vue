@@ -7,7 +7,7 @@
       周末去哪儿
     </div>
     <ul class="weekend-list">
-      <li class="item clearfix" v-for="item in weekendList" :key="item.id">
+      <li class="item clearfix" v-for="item in list" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl">
         </div>
@@ -22,30 +22,13 @@
 
 <script>
 export default {
+  props: {
+    list: Array
+  },
   name: 'HomeRecommend',
   data () {
     return {
-      weekendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/86/e3a589b8ac4498.jpg_r_640x214_b8678794.jpg',
-        title: '深圳赏秋胜地',
-        desc: '在深圳，边走边摄的醉美秋色'
-      },{
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/4b/d04aa63b1b0ab3.jpg_r_640x214_a3a9c5b6.jpg',
-        title: '深圳旅游Top10',
-        desc: '深圳，向往一座城，不需要理由'
-      },{
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1602/88/bf120edeaea383.jpg_r_640x214_f8591f7b.jpg',
-        title: '欢乐长隆',
-        desc: '世界欢乐汇聚长隆'
-      },{
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/73/8904e9c01d5c40.jpg_r_640x214_6b230adb.jpg',
-        title: '休闲观光撒野',
-        desc: '周末就是要High个够'
-      }]
+      
     }
   }
 }

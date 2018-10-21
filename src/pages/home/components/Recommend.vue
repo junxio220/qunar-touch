@@ -7,7 +7,7 @@
 			热销推荐
 		</div>
 		<ul class="recommend-list">
-			<li class="item clearfix" v-for="item in recommendList" :key="item.id">
+			<li class="item clearfix" v-for="item in list" :key="item.id">
 				<div class="item-img-wrapper">
 					<img class="item-img" :src="item.imgUrl">
 				</div>
@@ -23,30 +23,13 @@
 
 <script>
 export default {
+	props: {
+		list: Array
+	},
 	name: 'HomeRecommend',
 	data () {
 		return {
-			recommendList: [{
-				id: '0001',
-				imgUrl: 'http://img1.qunarzz.com/sight/p38/201211/04/7ed9f5ba01a8412893835fbb.jpg_200x200_1a163b27.jpg',
-				title: '可园山庄',
-				desc: '清代广东四大名园之一，也是岭南园林的代表作，前人赞为“可羡人间福地，园夸天上仙宫”。'
-			},{
-				id: '0002',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/a3/a32e2f6b5b6fe1ba90.water.jpg_200x200_ac5b9bd9.jpg',
-				title: '东莞观音山国家森林公园',
-				desc: '这座美到不可方物的小镇是传说中的格林童话小镇，就是那座有这青蛙王子、灰姑娘、狼和小羊等等故事的格林小镇。小镇传奇，带着您的孩子去探索更多的故事吧！'
-			},{
-				id: '0003',
-				imgUrl: '//img1.qunarzz.com/sight/p0/1810/4c/4c3e7f52ffd973b0a3.water.jpg_110x110_628f5efc.jpg',
-				title: '世界之窗',
-				desc: '世界奇观、历史遗迹、古今名胜、民间歌舞表演融为一体的人造主题公园。'
-			},{
-				id: '0004',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/15/15ca1d0eab6bf46c.water.jpg_110x110_881e1cda.jpg',
-				title: '东部华侨城',
-				desc: '国家环境保护部和国家旅游局联合授予的首个 “国家生态旅游示范区”。'
-			}]
+			
 		}
 	}
 }

@@ -18,60 +18,22 @@
 
 <script>
 export default {
+	props: {
+		list: Array
+	},
 	name: 'HomeIcons',
 	data () {
 		return {
-				swiperOption: {
-		        pagination: '.swiper-pagination',
-		        loop: true
-      	},
-				iconsList: [{
-					id: '001',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-					desc: '景点门票'
-				}, {
-					id: '002',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-		  		desc: '动植物园'
-				},{
-					id: '003',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/87/20656da0ac042002.png',
-		  		desc: '玻璃栈道'
-				},{
-					id: '004',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-		  		desc: '东莞必游'
-				},{
-					id: '005',
-					imgUrl: 'https://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-		  		desc: '打卡圣地'
-				},{
-					id: '006',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',
-		  		desc: '亲子游'
-				},{
-					id: '007',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',
-		  		desc: '玩转长隆'
-				},{
-					id: '008',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',
-		  		desc: '水世界乐园'
-				},{
-					id: '009',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/48/cb72b99b71974c02.png',
-		  		desc: '生活休闲'
-				},{
-					id: '010',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png',
-		  		desc: '全部玩乐'
-				}]
-		}
+			swiperOption: {
+	        pagination: '.swiper-pagination',
+	        autoplay: false
+      }
+    }
 	},
 	computed: {
 		pages(){
 			const pages = [];
-			this.iconsList.forEach((item, index)=>{
+			this.list.forEach((item, index)=>{
 				const page = Math.floor(index / 8);
 				if (!pages[page]) {
 					pages[page] = [];
@@ -87,7 +49,6 @@ export default {
 <style scoped lang="less">
 	@import "~assets/styles/mixins.less";
 	
-
   .icons /deep/ .swiper-container {
 		overflow: hidden;
 		height: 0;
