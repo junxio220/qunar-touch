@@ -36,7 +36,7 @@ export default {
     	if(this.touchStatus) {
         this.timer = setTimeout( ()=> {
           const touchY = e.touches[0].clientY - 80;
-          let index = Math.floor((touchY - this.startY) / 20);
+          let index = Math.floor((touchY - this.startY) / 16);
           if(index >= 0 && index < this.citiesList.length) {
             this.$emit('change', this.citiesList[index]);
           }
