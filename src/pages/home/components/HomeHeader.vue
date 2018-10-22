@@ -22,8 +22,6 @@
   </div>
 </template>
 <script>
-import 'assets/js/svg_icon.js';
-
 export default {
   props: {
     city: String

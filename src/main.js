@@ -8,6 +8,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'assets/styles/reset.css' // 样式重置
 import 'assets/styles/border.css' // 移动端1px解决
 import 'swiper/dist/css/swiper.css'
+import 'assets/js/svg_icon.js' // svg-icon
 
 Vue.config.productionTip = false
 fastClick.attach(document.body) // 解决移动端300ms延迟
