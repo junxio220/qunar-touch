@@ -22,15 +22,16 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  props: {
-    city: String
-  },
   data() {
     return {}
   },
   methods: {},
-  computed: {},
+  computed: {
+    ...mapState(['city'])
+  },
   components: {}
 }
 
@@ -60,16 +61,16 @@ export default {
   .header-input {
     flex: 1;
     height: auto;
-    line-height: .31rem;
+    line-height: .29rem;
     background: #fff;
     border-radius: unit(2/100, rem);
-    margin: unit(6/100, rem) 0;
+    margin: unit(7/100, rem) 0;
     color: rgba(0, 0, 0, 0.2);
     display: flex;
     .findIcon {
       width: unit(20/100, rem);
       height: 100%;
-      padding: 0 unit(10/100, rem);
+      padding: 0 unit(6/100, rem);
       fill: #ddd;
     }
   }
@@ -79,7 +80,7 @@ export default {
     height: 100%;
     color: #fff;
     text-align: center;
-    width: unit(62/100, rem);
+    min-width: unit(62/100, rem);
     padding-left: unit(8/100, rem);
     display: flex;
     justify-content: space-around;
